@@ -25,10 +25,12 @@ steps:
     pwd
     echo list directory
     ls
-    cd $(Agent.BuildDirectory)/s/manifests
+    
     ls
    
   displayName: 'Download kube-score package'
-- script:  
-    $(Agent.BuildDirectory)/s/kube-score score $(Agent.BuildDirectory)/s/manifests/*.yaml
+- script:
+    cd $(Agent.BuildDirectory)/s
+    kube-score score ./manifests/Kube_Invalid.yaml ./manifests/kube_Deploy.yaml
+    #$(Agent.BuildDirectory)/s/kube-score score $(Agent.BuildDirectory)/s/manifests/*.yaml
   displayName: 'Analyze with kube-score'
