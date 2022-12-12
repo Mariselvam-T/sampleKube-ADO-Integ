@@ -29,7 +29,7 @@ steps:
     ls
    
   displayName: 'Download kube-score package'
-- script:
+- script: |
     cd $(Agent.BuildDirectory)/s
     kube-score score ./manifests/Kube_Invalid.yaml ./manifests/kube_Deploy.yaml
     #$(Agent.BuildDirectory)/s/kube-score score $(Agent.BuildDirectory)/s/manifests/*.yaml
