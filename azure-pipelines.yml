@@ -25,10 +25,10 @@ steps:
     pwd
     echo list directory
     ls
-    cd kube-score
+    cd manifests
     ls
    
   displayName: 'Download kube-score package'
 - script:  
-    $(Agent.BuildDirectory)/s/kube-score score *.yml
+    $(Agent.BuildDirectory)/s/kube-score score *.yaml
   displayName: 'Analyze with kube-score'
