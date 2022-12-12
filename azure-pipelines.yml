@@ -25,6 +25,8 @@ steps:
     pwd
     echo list directory
     ls
+    cd kube-score
+    ls
    
   displayName: 'Download kube-score package'
 - script:  
