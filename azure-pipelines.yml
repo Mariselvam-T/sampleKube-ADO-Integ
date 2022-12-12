@@ -25,7 +25,7 @@ steps:
     pwd
     echo list directory
     ls
-    cd manifests
+    cd $(Agent.BuildDirectory)/s/manifests
     ls
    
   displayName: 'Download kube-score package'
