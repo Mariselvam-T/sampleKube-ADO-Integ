@@ -25,5 +25,8 @@ steps:
     pwd
     echo list directory
     ls
-    #$(Agent.BuildDirectory)/s/codeql/kube-score/kube-score score *.yml
+   
   displayName: 'Download kube-score package'
+- script:  
+    $(Agent.BuildDirectory)/s/codeql/kube-score/kube-score score *.yml
+  displayName: 'Analyze with kube-score'
