@@ -30,5 +30,5 @@ steps:
    
   displayName: 'Download kube-score package'
 - script:  
-    $(Agent.BuildDirectory)/s/codeql/kube-score score *.yml
+    $(Agent.BuildDirectory)/s/kube-score score *.yml
   displayName: 'Analyze with kube-score'
