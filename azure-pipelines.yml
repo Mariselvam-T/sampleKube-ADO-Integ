@@ -30,7 +30,6 @@ steps:
    
   displayName: 'Download kube-score package'
 - script: |
-    cd $(Agent.BuildDirectory)/s
-    kube-score score ./manifests/Kube_Invalid.yaml ./manifests/kube_Deploy.yaml
-    #$(Agent.BuildDirectory)/s/kube-score score $(Agent.BuildDirectory)/s/manifests/*.yaml
+    #kube-score score ./manifests/Kube_Invalid.yaml ./manifests/kube_Deploy.yaml
+    $(Agent.BuildDirectory)/s/kube-score score $(Agent.BuildDirectory)/s/manifests/Kube_Invalid.yaml $(Agent.BuildDirectory)/s/manifests/kube_Deploy.yaml
   displayName: 'Analyze with kube-score'
